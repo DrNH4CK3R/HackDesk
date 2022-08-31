@@ -38,8 +38,7 @@ a {
 /* ----- Menu ----- */
 .header{
     position: fixed;
-    top: 0;
-
+    width: 100%;
     background: rgba(103, 33, 80, 0.25);
     backdrop-filter: blur(250px);
 }
@@ -219,6 +218,10 @@ a {
         right: 25px;
         width: 35vw;
         height: 40vh;
+    }
+    .bgdecor{
+        width: 100vw;
+        height: 200vh;
     }
 }
 @media only screen and (max-width: 600px) {
