@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>#include&lt;hack&gt;</title>
+</head>
+<body>
+
+
+    <!-- ==== Landing Page ==== -->
+    <img src="./css/image/bgElipse.png" alt="" class="bgdecor">
+
+    <img src="./css/image/spaceman.png" alt="" class="spaceman">
+    <h1 class="landhead">#include&lt;hack&gt;</h1>
+    <h2 class="landhead2">Learn | Hack | Explore</h2>
+
+    <p class="landp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="primarybtn landbtn">Register Now !</div>
+    
+
+     <!-- ===== Nav Menu ===== -->
+
+     <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Logo</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Themes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sponsors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">FAQs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+        
+
+</body>
+
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Kanit&family=Roboto+Flex:opsz@8..144&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #290A22;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.primarybtn {
+    position: absolute;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.083vw;
+    font-family: 'Roboto Flex';
+    color: #97D8F5;
+    font-weight: 600;
+
+    padding: 16px 32px;
+    gap: 10px;
+
+    border: 3px solid #B6D71C;
+    border-radius: 16px;
+}
+
+/* ----- Menu ----- */
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(103, 33, 80, 0.25);
+    backdrop-filter: blur(250px);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #97D8F5;
+    opacity: 0.85;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1.6vw;
+    font-weight: 400;
+    color: rgba(151, 216, 245, 0.85);
+    font-family: 'Roboto Flex';
+}
+.nav-link:hover{
+    color: #97D8F5;
+    font-weight: 600;
+}
+.nav-logo {
+    font-size: 2.1vw;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.45rem;
+        flex-direction: column;
+        background-color: #390F2D;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-link {
+        font-size: 1.6rem;
+    }
+    .nav-logo {
+        font-size: 2.1rem;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* ---------- Landing page ---------- */
+.landhead{
+    position: absolute;
+    left: 120px;
+    top: 220px;
+    
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 4.16vw;
+    line-height: 83px;
+    
+    color: #97D8F5;
+    
+    text-shadow: 4px 0px 1px #D41B82;
+}
+.landhead2{
+    position: absolute;
+    left: 120px;
+    top: 305px;
+
+    font-family: 'Roboto Flex';
+    font-weight: 500;
+    font-size: 2.083vw;
+    line-height: 38px;
+    
+    letter-spacing: 0.045em;
+    
+    color: #D15791; 
+}
+.landp{
+    position: absolute;
+    width: 52.12vw;
+    left: 120px;
+    top: 486px;
+    
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2vw;
+    line-height: 47px;
+    
+    color: rgba(151, 216, 245, 0.79);
+}
+.landbtn{
+    width: 17.57vw;
+    height: 4.16vw;
+    left: 120px;
+    top: 650px;
+}
+.spaceman{
+    position: absolute;
+    width: 35.1vw;
+    height: 75.31vh;
+    right: 120px;
+    top: 160px;
+}
+.bgdecor{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .landp{
+        top: 440px;
+        line-height: 34px;
+    }
+    .landbtn{
+        top: 600px;
+        width: 18.7vw;
+        font-size: 1.8vw;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .landhead{
+        left: 88px;
+    }
+    .landhead2{
+        left: 88px;
+    }
+    .landp{
+        left: 88px;
+    }
+    .landbtn{
+        left: 88px;
+        width: 22vw;
+        height: 1.5vw;
+    }
+    .spaceman{
+        top: 200px;
+        right: 25px;
+        width: 35vw;
+        height: 40vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .landhead{
+        font-size: 8.08vw;
+        top: 144px;
+        left: 72px;
+        text-shadow: 3px 0px 1px #D41B82;
+    }
+    .landhead2{
+        font-size: 4vw;
+        top: 208px;
+    }
+    .landp{
+        font-size: 3.7vw;
+        width: 70vw;
+        top: 350px;
+        left: 80px;
+        text-align: center;
+    }
+    .landbtn{
+        width: 35vw;
+        top: 520px;
+        left: 145px;
+        font-size: 2.8vw;
+    }
+    .spaceman{
+        top: 400px;
+        left: 150px;
+        filter: blur(7px);
+    }
+}
